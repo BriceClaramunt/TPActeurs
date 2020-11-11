@@ -7,6 +7,7 @@
 
 #endif //UNTITLED_ACTORS_H
 
+//structure contenant toutes les propriétés d'un acteur.
 typedef struct s_act
 {
     const char *name;
@@ -15,3 +16,14 @@ typedef struct s_act
     const char *nationality;
 } actor;
 
+//structure contenant toutes les propriétés d'un réalisateur.
+typedef struct s_director
+{
+    const char *name;
+    const char *surname;
+    const char *dateOfBirth;
+    const char *nationality;
+} director;
+
+//on peut facilement améliorer la date de naissance, en faisant une structure pour cette dernière.
+//Si j'ai le temps, faire cette date de naissance (voir page 23 du cours 6)
