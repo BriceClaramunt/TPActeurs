@@ -3,7 +3,7 @@
 
 int main() {
     actor Leonardo;
-    Leonardo.dateOfBirth = "24/04/94";
-    printf("%s",Leonardo.dateOfBirth);
+    Leonardo.name = "24/04/94";
+    printf("%s",Leonardo.name);
     return 0;
 }

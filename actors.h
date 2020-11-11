@@ -9,8 +9,9 @@
 
 typedef struct s_act
 {
-    char *name;
-    char *surname;
-    char *dateOfBirth;
-    char *nationality;
+    const char *name;
+    const char *surname;
+    const char *dateOfBirth;
+    const char *nationality;
 } actor;
+
