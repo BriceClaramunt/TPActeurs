@@ -32,5 +32,6 @@ void displayMovie(movie movieName)
     printf("Realisateur : %s %s \n", movieName.nameDirector.surname, movieName.nameDirector.name);
     printf("Acteurs : %s %s, %s %s, %s %s \n", movieName.mainActor1.surname, movieName.mainActor1.name, movieName.mainActor2.surname, movieName.mainActor2.name, movieName.mainActor3.surname, movieName.mainActor3.name);
     printf("Duree : %u min \n", movieName.movieTime);
-    printf("Genre : %s \n", movieName.movieGenre);
+    printf("Genre : %s \n\n", movieName.movieGenre);
 }
+

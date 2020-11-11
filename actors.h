@@ -27,3 +27,12 @@ typedef struct s_director
 
 //on peut facilement améliorer la date de naissance, en faisant une structure pour cette dernière.
 //Si j'ai le temps, faire cette date de naissance (voir page 23 du cours 6)
+
+
+void displayDirector (director directorName)
+{
+    printf("Fiche REALISATEUR \n");
+    printf("Nom : %s %s \n", directorName.surname, directorName.name);
+    printf("Date de naissance : %s \n", directorName.dateOfBirth);
+    printf("Nationalite : %s \n\n", directorName.nationality);
+}

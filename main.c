@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include "film.h"
 
+void displayMovie (movie);
+void displayDirector (director);
+
 int main() {
 
     movie avatar;
@@ -16,6 +19,8 @@ int main() {
     sigourneyWeaver.name = "Weaver";
     jamesCameron.name = "Cameron";
     jamesCameron.surname = "James";
+    jamesCameron.dateOfBirth = "16 Aout 1954";
+    jamesCameron.nationality = "Canadienne";
     avatar.nameDirector = jamesCameron;
     avatar.title = "Avatar";
     avatar.yearRelease = 2010;
@@ -25,5 +30,6 @@ int main() {
     avatar.movieTime = 162;
     avatar.movieGenre = "Science-Fiction";
     displayMovie(avatar);
+    displayDirector(jamesCameron);
     return 0;
 }
