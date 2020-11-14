@@ -20,10 +20,10 @@ typedef struct s_movie
 {
     char *title;
     unsigned int yearRelease;
-    director nameDirector;
-    actor mainActor1;
-    actor mainActor2;
-    actor mainActor3;
+    artist nameDirector;
+    artist mainActor1;
+    artist mainActor2;
+    artist mainActor3;
     unsigned int movieTime;
     enum movieGenre nameGenre;
 } movie;
@@ -56,6 +56,8 @@ void writeGenre(enum movieGenre nameGenre) {
         case 7:
             printf("Genre : Science-Fiction\n");
             break;
+        default:
+            printf("Genre inexistant\n");
     }
 }
 

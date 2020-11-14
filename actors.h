@@ -7,7 +7,7 @@
 
 #endif //UNTITLED_ACTORS_H
 
-enum job {actor, director, both};
+enum job {actor, director, actorDirector};
 
 //structure contenant toutes les propriétés d'un acteur.
 typedef struct s_art
@@ -17,27 +17,33 @@ typedef struct s_art
     const char *dateOfBirth;
     const char *nationality;
     enum job nameJob;
-    //const char *job;  Could be an actor, a director or both.
 } artist;
 
-//structure contenant toutes les propriétés d'un réalisateur.
-//typedef struct s_director
-//{
-//    const char *name;
-//    const char *surname;
-//    const char *dateOfBirth;
-//    const char *nationality;
-//} director;
 
 //on peut facilement améliorer la date de naissance, en faisant une structure pour cette dernière.
 //Si j'ai le temps, faire cette date de naissance (voir page 23 du cours 6)
 
+void writeJob(enum job nameJob) {
+    switch (nameJob) {
+        case 0:
+            printf("Metier : Acteur\n");
+            break;
+        case 1:
+            printf("Metier : Realisateur\n");
+            break;
+        case 2:
+            printf("Metier : Acteur-Realisateur\n");
+            break;
+        default:
+            printf("Metier non reconnu\n");
+    }}
 
-void displayDirector (director directorName)
+void displayArtist (artist artistName)
 {
-    printf("\nFiche REALISATEUR \n");
-    printf("Nom : %s %s \n", directorName.surname, directorName.name);
-    printf("Date de naissance : %s \n", directorName.dateOfBirth);
-    printf("Nationalite : %s \n\n", directorName.nationality);
+    printf("\nFiche ARTISTE \n");
+    printf("Nom : %s %s \n", artistName.surname, artistName.name);
+    printf("Date de naissance : %s \n", artistName.dateOfBirth);
+    printf("Nationalite : %s \n", artistName.nationality);
+    writeJob(artistName.nameJob);
 
 }

@@ -29,7 +29,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f1587f5-9350-4751-864c-2456a1fe3bb9" name="Default Changelist" comment="function mainMenu (without the different choices implemented)">
+    <list default="true" id="4f1587f5-9350-4751-864c-2456a1fe3bb9" name="Default Changelist" comment="change with a struct artist, change with the movie genre that is now an enum">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actors.h" beforeDir="false" afterPath="$PROJECT_DIR$/actors.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/film.h" beforeDir="false" afterPath="$PROJECT_DIR$/film.h" afterDir="false" />
@@ -89,7 +89,7 @@
       <workItem from="1604933114585" duration="1065000" />
       <workItem from="1604957522040" duration="2037000" />
       <workItem from="1605089241632" duration="11199000" />
-      <workItem from="1605347063983" duration="9582000" />
+      <workItem from="1605347063983" duration="10591000" />
     </task>
     <task id="LOCAL-00001" summary="test branch">
       <created>1604957822904</created>
@@ -140,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605348603884</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="change with a struct artist, change with the movie genre that is now an enum">
+      <created>1605369360431</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1605369360431</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,7 +173,8 @@
     <MESSAGE value="function displayMovie" />
     <MESSAGE value="function displayDirector" />
     <MESSAGE value="function mainMenu (without the different choices implemented)" />
-    <option name="LAST_COMMIT_MESSAGE" value="function mainMenu (without the different choices implemented)" />
+    <MESSAGE value="change with a struct artist, change with the movie genre that is now an enum" />
+    <option name="LAST_COMMIT_MESSAGE" value="change with a struct artist, change with the movie genre that is now an enum" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Deployment" timestamp="1604933232672">
@@ -181,34 +189,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="571" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604933280196" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605363621808">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1605370227737">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605363621808" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605370227737" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605090096137" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605363621807">
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1605370227737">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605363621807" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605370227737" />
     <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605090096137" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605363621807">
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1605370227737">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605363621807" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605370227737" />
     <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605090096137" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605363621808">
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1605370227737">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605363621808" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605370227737" />
     <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605090096137" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1605362903043">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605362903043" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605348609698">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1605369364452">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605348609698" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605369364452" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605090145390" />
   </component>
 </project>

@@ -38,7 +38,7 @@ int main() {
     avatar.movieTime = 162;
     avatar.nameGenre = ScienceFiction;
     displayMovie(avatar);
-    displayDirector(jamesCameron);
+    displayArtist(jamesCameron);
     return 0;
 }
 
