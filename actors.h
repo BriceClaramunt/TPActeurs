@@ -7,24 +7,27 @@
 
 #endif //UNTITLED_ACTORS_H
 
+enum job {actor, director, both};
+
 //structure contenant toutes les propriétés d'un acteur.
-typedef struct s_act
+typedef struct s_art
 {
     const char *name;
     const char *surname;
     const char *dateOfBirth;
     const char *nationality;
+    enum job nameJob;
     //const char *job;  Could be an actor, a director or both.
-} actor;
+} artist;
 
 //structure contenant toutes les propriétés d'un réalisateur.
-typedef struct s_director
-{
-    const char *name;
-    const char *surname;
-    const char *dateOfBirth;
-    const char *nationality;
-} director;
+//typedef struct s_director
+//{
+//    const char *name;
+//    const char *surname;
+//    const char *dateOfBirth;
+//    const char *nationality;
+//} director;
 
 //on peut facilement améliorer la date de naissance, en faisant une structure pour cette dernière.
 //Si j'ai le temps, faire cette date de naissance (voir page 23 du cours 6)
@@ -32,8 +35,9 @@ typedef struct s_director
 
 void displayDirector (director directorName)
 {
-    printf("Fiche REALISATEUR \n");
+    printf("\nFiche REALISATEUR \n");
     printf("Nom : %s %s \n", directorName.surname, directorName.name);
     printf("Date de naissance : %s \n", directorName.dateOfBirth);
     printf("Nationalite : %s \n\n", directorName.nationality);
+
 }

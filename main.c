@@ -7,16 +7,17 @@
 //vérifier si les prototypes doivent aussi être mis dans le .h
 void displayMovie (movie);
 void displayDirector (director);
+void writeGenre(enum movieGenre);
 void mainMenu();
 
 int main() {
 
     mainMenu();
     movie avatar;
-    director jamesCameron;
-    actor zoeSaldana;
-    actor samWorthington;
-    actor sigourneyWeaver;
+    artist jamesCameron;
+    artist zoeSaldana;
+    artist samWorthington;
+    artist sigourneyWeaver;
     zoeSaldana.surname = "Zoe";
     zoeSaldana.name = "Saldana";
     samWorthington.surname = "Sam";
@@ -27,6 +28,7 @@ int main() {
     jamesCameron.surname = "James";
     jamesCameron.dateOfBirth = "16 Aout 1954";
     jamesCameron.nationality = "Canadienne";
+    jamesCameron.nameJob = director;
     avatar.nameDirector = jamesCameron;
     avatar.title = "Avatar";
     avatar.yearRelease = 2010;
@@ -34,7 +36,7 @@ int main() {
     avatar.mainActor2 = zoeSaldana;
     avatar.mainActor3 = sigourneyWeaver;
     avatar.movieTime = 162;
-    avatar.movieGenre = "Science-Fiction";
+    avatar.nameGenre = ScienceFiction;
     displayMovie(avatar);
     displayDirector(jamesCameron);
     return 0;
@@ -44,12 +46,10 @@ int main() {
 void mainMenu ()
 {
     unsigned int choice;
-    printf("Bienvenue dans cette application pour les cinephiles!\nMENU =\n\n[1] Lister les films\n[2] Lister les realisateurs\n[3] Rechercher un film par titre\n[4] Quitter l'application\n\n");
-    printf("Entrez votre choix :");
-    scanf("%u", choice);
+    printf("Bienvenue dans cette application pour les cinephiles!\nMENU =\n\n[1] Lister les films\n[2] Lister les realisateurs\n[3] Rajouter un film\n[4] Rajouter un artiste\n[5] Rechercher un film par titre\n[6] Quitter l'application\n\n");
+    printf("Entrez votre choix :\n\n");
+    //scanf("%u", choice);
     switch (choice) {
-        case 1:
-
 
     }
 }
