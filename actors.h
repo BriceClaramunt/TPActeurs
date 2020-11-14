@@ -14,6 +14,7 @@ typedef struct s_act
     const char *surname;
     const char *dateOfBirth;
     const char *nationality;
+    //const char *job;  Could be an actor, a director or both.
 } actor;
 
 //structure contenant toutes les propriétés d'un réalisateur.

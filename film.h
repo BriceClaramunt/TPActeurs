@@ -11,7 +11,7 @@
 #include "actors.h"
 
 //structure contenant toutes les propriétés d'un film
-//ATTENTION, le genre du film parmi une sélection : comment faire ?
+//ATTENTION, le genre du film parmi une sélection : comment faire ? Pareil pour le métier : on pourrait donner une propriété à la structure artiste avec des choix acteurs, réalisateurs ou les deux à la fois.
 //ATTENTION, probablement revoir les pointeurs car l'idéal serait que le réalisateur et les acteurs pointent vers leur emplacement mémoire afin de récupérer leur nom.
 typedef struct s_movie
 {
@@ -35,3 +35,7 @@ void displayMovie(movie movieName)
     printf("Genre : %s \n\n", movieName.movieGenre);
 }
 
+movie findMovie (movie movieTitle)
+{
+    
+}
