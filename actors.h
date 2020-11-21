@@ -47,3 +47,25 @@ void displayArtist (artist artistName)
     writeJob(artistName.nameJob);
 
 }
+
+//ou alors récupérer chaque nom d'artiste dans la liste, et appeler displayArtist pour chacun des artistes ?
+displayAllArtists (FILE* fileRead)
+{
+    char *string1;
+    fileRead = fopen("acteurs.txt", "r+");
+
+    if (fileRead != NULL)
+    {
+        while (fgets(string1, sizeof(string1), fileRead) != NULL)
+        {
+            printf("%s", string1);
+        }
+        fclose(fileRead);
+    }
+    else
+    {
+    // On affiche un message d'erreur
+    printf("Le fichier acteurs.txt ne peut pas être lu.");
+    }
+    return 0;
+}

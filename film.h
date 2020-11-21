@@ -14,7 +14,6 @@ enum movieGenre { Action, Horreur, Comedie, Documentaire, Policier, Drame, Anima
 
 //structure contenant toutes les propriétés d'un film
 //faire une fonction créer artiste avec le rôle soit de réalisateur soit d'acteur
-//ATTENTION, le genre du film parmi une sélection : comment faire (FAIRE UN ENUM ET UNE FONCTION POUR VERIFIER SI LA STRING EST DANS L'ENUM)? Pareil pour le métier : on pourrait donner une propriété à la structure artiste avec des choix acteurs, réalisateurs ou les deux à la fois.
 //ATTENTION, probablement revoir les pointeurs car l'idéal serait que le réalisateur et les acteurs pointent vers leur emplacement mémoire afin de récupérer leur nom.
 typedef struct s_movie
 {
