@@ -50,12 +50,21 @@ int main() {
     if (fichier != NULL)
     {
 
-        char tmp[STRING_SIZE];
+
         while (fgets(string, STRING_SIZE, fichier) != NULL)
         {
-            //test avec la date, nationalité et le métier
-            fscanf(fichier, "%s; %s; %s;", &tmp[0], &tmp[1], &tmp[2]);
-            printf("Date Nationalite et metier : %s, %s et %s", &tmp[0], &tmp[1], &tmp[2]);
+            char tmp[3];
+            tmp[0] = strtok(string,";");
+            tmp[1] = strtok(string,";");
+            tmp[2] = strtok(string,";");
+            if(tmp != NULL)
+            {
+                //test avec la date, nationalité et le métier
+                fscanf(fichier, "%s;%s;%s;", &tmp[0], &tmp[1], &tmp[2]);
+                printf("%s\n", &tmp[0]);
+                printf("Date Nationalite et metier : %s, %s et %s", &tmp[0], &tmp[1], &tmp[2]);
+            }
+
 
 
         }
