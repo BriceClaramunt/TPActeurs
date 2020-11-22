@@ -10,6 +10,7 @@
 enum job {actor, director, actorDirector};
 
 //structure contenant toutes les propriétés d'un acteur.
+//afficher artiste 0 = afficher que les artistes, 1 que les réalisateurs, 2 acteur réalisateurs
 typedef struct s_art
 {
     const char *name;
@@ -49,23 +50,50 @@ void displayArtist (artist artistName)
 }
 
 //ou alors récupérer chaque nom d'artiste dans la liste, et appeler displayArtist pour chacun des artistes ?
-displayAllArtists (FILE* fileRead)
+void displayAllArtists (FILE* fileRead)
 {
-    char *string1;
-    fileRead = fopen("acteurs.txt", "r+");
+    FILE* file= fopen("acteurs.txt","r+");
 
-    if (fileRead != NULL)
-    {
-        while (fgets(string1, sizeof(string1), fileRead) != NULL)
-        {
-            printf("%s", string1);
+    if (file == NULL) {
+        perror("Le fichier acteurs.txt ne peut pas être lu");
+        exit(1);
+    }
+
+    char string[200];
+
+
+
+    while (fgets(string, sizeof(string), file)) {
+        int i = 0;
+        artist tmp;
+
+        char *token;
+        token = strtok(string,";");
+        while (token != NULL) {
+            switch (i) {
+                case 0:
+                    tmp.surname = token;
+                    break;
+                case 1:
+                    tmp.name = token;
+                    break;
+                case 2:
+                    tmp.dateOfBirth= token;
+                    break;
+                case 3:
+                    tmp.nationality = token;
+                    break;
+                case 4:
+                    tmp.nameJob = actor;
+                    break;
+
+            }
+            token = strtok(NULL,";");
+            ++i;
+
         }
-        fclose(fileRead);
+        displayArtist(tmp);
+//        printf("\n");
     }
-    else
-    {
-    // On affiche un message d'erreur
-    printf("Le fichier acteurs.txt ne peut pas être lu.");
-    }
-    return 0;
+
 }

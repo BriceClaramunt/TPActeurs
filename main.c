@@ -40,49 +40,18 @@ int main() {
     avatar.movieTime = 162;
     avatar.nameGenre = ScienceFiction;
 
-    displayMovie(avatar);
-    displayArtist(jamesCameron);
+//    displayMovie(avatar);
+//    displayArtist(jamesCameron);
 
     FILE* fichier = NULL;
-    char string[STRING_SIZE];
-
-    fichier = fopen("acteurs.txt", "r+");
-    if (fichier != NULL)
-    {
-
-
-        while (fgets(string, STRING_SIZE, fichier) != NULL)
-        {
-            char tmp[3];
-            tmp[0] = strtok(string,";");
-            tmp[1] = strtok(string,";");
-            tmp[2] = strtok(string,";");
-            if(tmp != NULL)
-            {
-                //test avec la date, nationalité et le métier
-                fscanf(fichier, "%s;%s;%s;", &tmp[0], &tmp[1], &tmp[2]);
-                printf("%s\n", &tmp[0]);
-                printf("Date Nationalite et metier : %s, %s et %s", &tmp[0], &tmp[1], &tmp[2]);
-            }
-
-
-
-        }
-
-    }
-    else
-    {
-        // On affiche un message d'erreur
-        printf("Le fichier acteurs.txt ne peut pas être lu.");
-    }
-
-    return 0;
+    displayAllArtists(fichier);
 }
 
 
 //void mainMenu ()
 //{
 //    unsigned int choice;
+//    FILE* fichier = NULL;
 //    printf("Bienvenue dans cette application pour les cinephiles!\nMENU =\n\n[1] Lister les films\n[2] Lister les artistes\n[3] Rajouter un film\n[4] Rajouter un artiste\n[5] Rechercher un film par titre\n[6] Quitter l'application\n\n");
 //    printf("Entrez votre choix :\n\n");
 //    //scanf("%u", choice);
