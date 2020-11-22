@@ -78,4 +78,4 @@ int main() {
 //}
 
 //ce qu'il reste à faire : implémenter la base de données (fichier .txt ou .csv), puis les fonctions du menu c'est-à-dire:
-//rechercher un film par son titre(film existe ou non), lister tous les films et tous les artistes?, rechercher un artiste, rajouter un film
+//rechercher un film par son titre(film existe ou non), rechercher un artiste, rajouter un film

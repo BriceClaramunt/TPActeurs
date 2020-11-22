@@ -18,6 +18,7 @@ typedef struct s_art
     const char *dateOfBirth;
     const char *nationality;
     enum job nameJob;
+    const char *moviesPlayed;
 } artist;
 
 
@@ -39,6 +40,18 @@ void writeJob(enum job nameJob) {
             printf("Metier non reconnu\n");
     }}
 
+enum job writeEnum (char *token, enum job nameJob)
+{
+    if(strcmp(token,"Acteur") == 0)
+        nameJob = actor;
+    if(strcmp(token,"Realisateur") == 0)
+        nameJob = director;
+    if(strcmp(token,"Acteur-Realisateur") == 0)
+        nameJob = actorDirector;
+    return nameJob;
+
+}
+
 void displayArtist (artist artistName)
 {
     printf("\nFiche ARTISTE \n");
@@ -46,6 +59,8 @@ void displayArtist (artist artistName)
     printf("Date de naissance : %s \n", artistName.dateOfBirth);
     printf("Nationalite : %s \n", artistName.nationality);
     writeJob(artistName.nameJob);
+    printf("Films associes a l'artiste: %s\n", artistName.moviesPlayed);
+
 
 }
 
@@ -84,7 +99,10 @@ void displayAllArtists (FILE* fileRead)
                     tmp.nationality = token;
                     break;
                 case 4:
-                    tmp.nameJob = actor;
+                    tmp.nameJob = writeEnum(token, tmp.nameJob);
+                    break;
+                case 5:
+                    tmp.moviesPlayed = token;
                     break;
 
             }
@@ -93,7 +111,6 @@ void displayAllArtists (FILE* fileRead)
 
         }
         displayArtist(tmp);
-//        printf("\n");
     }
 
 }
