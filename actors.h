@@ -64,7 +64,6 @@ void displayArtist (artist artistName)
 
 }
 
-//ou alors récupérer chaque nom d'artiste dans la liste, et appeler displayArtist pour chacun des artistes ?
 void displayAllArtists (FILE* fileRead)
 {
     FILE* file= fopen("acteurs.txt","r+");
@@ -112,5 +111,4 @@ void displayAllArtists (FILE* fileRead)
         }
         displayArtist(tmp);
     }
-
 }

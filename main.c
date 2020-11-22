@@ -44,7 +44,7 @@ int main() {
 //    displayArtist(jamesCameron);
 
     FILE* fichier = NULL;
-    displayAllArtists(fichier);
+    displayAllMovies(fichier);
 }
 
 

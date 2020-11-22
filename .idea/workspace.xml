@@ -29,9 +29,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f1587f5-9350-4751-864c-2456a1fe3bb9" name="Default Changelist" comment="displayAllArtists working except for the enum parameter">
+    <list default="true" id="4f1587f5-9350-4751-864c-2456a1fe3bb9" name="Default Changelist" comment="displayAllArtists done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actors.h" beforeDir="false" afterPath="$PROJECT_DIR$/actors.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film.h" beforeDir="false" afterPath="$PROJECT_DIR$/film.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +58,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ObjectiveC" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Cinema_5/Cinema 5/Films.h" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/actors.h" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -86,7 +88,7 @@
       <workItem from="1605347063983" duration="12372000" />
       <workItem from="1605825997545" duration="3836000" />
       <workItem from="1605958300153" duration="10411000" />
-      <workItem from="1606050130599" duration="8170000" />
+      <workItem from="1606050130599" duration="12251000" />
     </task>
     <task id="LOCAL-00001" summary="test branch">
       <created>1604957822904</created>
@@ -172,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1606051231263</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="displayAllArtists done">
+      <created>1606059330526</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1606059330526</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -203,17 +212,18 @@
     <MESSAGE value="Still a problem with files" />
     <MESSAGE value="Still a problem with files 2" />
     <MESSAGE value="displayAllArtists working except for the enum parameter" />
-    <option name="LAST_COMMIT_MESSAGE" value="displayAllArtists working except for the enum parameter" />
+    <MESSAGE value="displayAllArtists done" />
+    <option name="LAST_COMMIT_MESSAGE" value="displayAllArtists done" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#Deployment" timestamp="1604933232672">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1604933232672" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606056750365">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606062918895">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606056750365" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606062918895" />
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1605978119446" />
     <state x="647" y="310" key="Github.ShareDialog" timestamp="1604933273413">
       <screen x="0" y="0" width="1536" height="824" />
@@ -223,25 +233,25 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="571" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604933280196" />
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1606058996545">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1606063955925">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606058996545" />
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606063955925" />
     <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605988970605" />
-    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1606058996545">
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1606063955924">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606058996545" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606063955924" />
     <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1605988970605" />
-    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1606058996544">
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1606063955924">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606058996544" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606063955924" />
     <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1605988970605" />
-    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1606058996545">
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1606063955924">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606058996545" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606063955924" />
     <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1605988970605" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1605988970606">
       <screen x="0" y="0" width="1536" height="824" />
@@ -263,10 +273,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605362903043" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606051233127">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606059333599">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606051233127" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606059333599" />
     <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605984675278" />
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1605984607943">
       <screen x="0" y="0" width="1536" height="824" />

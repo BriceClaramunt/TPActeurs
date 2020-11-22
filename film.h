@@ -60,6 +60,25 @@ void writeGenre(enum movieGenre nameGenre) {
     }
 }
 
+enum movieGenre writeMovieGenre (char *token, enum movieGenre nameGenre)
+{
+    if(strcmp(token,"Action") == 0)
+        nameGenre = Action;
+    if(strcmp(token,"Horreur") == 0)
+        nameGenre = Horreur;
+    if(strcmp(token,"Comedie") == 0)
+        nameGenre = Comedie;
+    if(strcmp(token,"Documentaire") == 0)
+        nameGenre = Documentaire;
+    if(strcmp(token,"Policier") == 0)
+        nameGenre = Policier;
+    if(strcmp(token,"Drame") == 0)
+        nameGenre = Drame;
+    if(strcmp(token,"Animation") == 0)
+        nameGenre = Animation;
+    return nameGenre;
+
+}
 
 
 void displayMovie(movie movieName)
@@ -73,7 +92,72 @@ void displayMovie(movie movieName)
 
 }
 
+void displayAllMovies (FILE* fileRead)
+{
+    FILE* file= fopen("films.txt","r+");
 
+    if (file == NULL) {
+        perror("Le fichier films.txt ne peut pas être lu");
+        exit(1);
+    }
+
+    char string[200];
+
+
+
+    while (fgets(string, sizeof(string), file)) {
+        int i = 0;
+        movie tmp;
+
+        char *token;
+        token = strtok(string,";");
+        while (token != NULL) {
+            switch (i) {
+                case 0:
+                    tmp.title = token;
+                    break;
+                case 1:
+                    tmp.yearRelease = strtol(token,NULL,0);
+                    break;
+                case 2:
+                    tmp.nameDirector.surname = token;
+                    break;
+                case 3:
+                    tmp.nameDirector.name = token;
+                    break;
+                case 4:
+                    tmp.mainActor1.surname = token;
+                    break;
+                case 5:
+                    tmp.mainActor1.name = token;
+                    break;
+                case 6:
+                    tmp.mainActor2.surname = token;
+                    break;
+                case 7:
+                    tmp.mainActor2.name = token;
+                    break;
+                case 8:
+                    tmp.mainActor3.surname = token;
+                    break;
+                case 9:
+                    tmp.mainActor3.name = token;
+                    break;
+                case 10:
+                    tmp.movieTime = strtol(token,NULL,0);;
+                    break;
+                case 11:
+                    tmp.nameGenre = writeMovieGenre(token, tmp.nameGenre);
+                    break;
+            }
+            token = strtok(NULL,";");
+            ++i;
+
+        }
+        displayMovie(tmp);
+    }
+
+}
 
 movie findMovie (movie movieTitle)
 {
