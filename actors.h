@@ -112,7 +112,7 @@ void displayAllArtists (FILE* fileRead)
     }
 }
 
-//à nouveau devoir créer une fonction pour le job de l'artiste
+//à nouveau devoir créer une fonction pour le job de l'artiste + faire fonctionner l'écriture
 void addArtist(FILE *file)
 {
     FILE* fichier = fopen("acteurs.txt","a");

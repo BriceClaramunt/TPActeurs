@@ -192,5 +192,40 @@ void findMovie(char *titre) {
 
 }
 
+void addMovie(FILE *file)
+{
+    FILE* fichier = fopen("films.txt","a");
+    movie movieAdded;
+    printf("Quel est le titre du film que vous voulez ajouter? \n");
+    scanf("%s",movieAdded.title);
+    printf("L'annee de sortie du film: \n");
+    scanf("%u", &movieAdded.yearRelease);
+    printf("Le prénom du realisateur : \n");
+    scanf("%s", movieAdded.nameDirector.surname);
+    printf("Le nom du realisateur : \n");
+    scanf("%s", movieAdded.nameDirector.name);
+    printf("Le prenom du 1er acteur principal : \n");
+    scanf("%s", movieAdded.mainActor1.surname);
+    printf("Son nom : \n");
+    scanf("%s", movieAdded.mainActor1.name);
+    printf("Le prenom du 2eme acteur principal : \n");
+    scanf("%s", movieAdded.mainActor2.surname);
+    printf("Son nom : \n");
+    scanf("%s", movieAdded.mainActor2.name);
+    printf("Le prenom du 3eme acteur principal : \n");
+    scanf("%s", movieAdded.mainActor3.surname);
+    printf("Son nom : \n");
+    scanf("%s", movieAdded.mainActor3.name);
+    printf("La duree du film (en minutes)");
+    scanf("%u", &movieAdded.movieTime);
+    printf("Quel est le genre du film ? (Parmi : Action, Horreur, Comedie, Documentaire, Policier, Drame, Animation, ScienceFiction");
+    scanf("%s", movieAdded.nameGenre);
+
+
+    fprintf(fichier, "%s;%u;%s;%s;%s;%s;%s;%s;%s;%s;%u;%s", movieAdded.title, movieAdded.yearRelease, movieAdded.nameDirector.surname, movieAdded.nameDirector.name, movieAdded.mainActor1.surname, movieAdded.mainActor1.name, movieAdded.mainActor2.surname, movieAdded.mainActor2.name, movieAdded.mainActor3.surname, movieAdded.mainActor3.name, movieAdded.movieTime, movieAdded.nameGenre);
+
+
+}
+
 
 
