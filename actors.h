@@ -9,8 +9,7 @@
 
 enum job {actor, director, actorDirector};
 
-//structure contenant toutes les propriétés d'un acteur.
-//afficher artiste 0 = afficher que les artistes, 1 que les réalisateurs, 2 acteur réalisateurs
+
 typedef struct s_art
 {
     const char *name;
@@ -111,4 +110,10 @@ void displayAllArtists (FILE* fileRead)
         }
         displayArtist(tmp);
     }
+}
+
+
+void addArtist()
+{
+
 }

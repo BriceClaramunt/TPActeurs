@@ -44,7 +44,10 @@ int main() {
 //    displayArtist(jamesCameron);
 
     FILE* fichier = NULL;
-    displayAllMovies(fichier);
+    char *titre;
+    printf("Tapez le nom du film que vous cherchez :\n");
+    scanf("%s", titre);
+    findMovie(titre);
 }
 
 
@@ -69,10 +72,16 @@ int main() {
 //            addArtist(fichier);
 //            break;
 //        case 5:
-//            findMovie(movieTitle);
-//            break;
+//             char *titre;
+//             printf("Tapez le nom du film que vous cherchez :\n");
+//             scanf("%s", titre);
+//             findMovie(titre);
+//             break;
 //        case 6:
 //              Quitter l'application (exit 0? mettre un default ??)
+//        default:
+//              printf("Tapez un numero parmi les choix possibles svp!");
+//              break;
 //
 //    }
 //}

@@ -83,7 +83,7 @@ enum movieGenre writeMovieGenre (char *token, enum movieGenre nameGenre)
 
 void displayMovie(movie movieName)
 {
-    printf("Fiche FILM\n");
+    printf("\nFiche FILM\n");
     printf( "%s (%u) \n", movieName.title, movieName.yearRelease);
     printf("Realisateur : %s %s \n", movieName.nameDirector.surname, movieName.nameDirector.name);
     printf("Acteurs : %s %s, %s %s, %s %s \n", movieName.mainActor1.surname, movieName.mainActor1.name, movieName.mainActor2.surname, movieName.mainActor2.name, movieName.mainActor3.surname, movieName.mainActor3.name);
@@ -159,7 +159,37 @@ void displayAllMovies (FILE* fileRead)
 
 }
 
-movie findMovie (movie movieTitle)
-{
-    
+
+
+void findMovie(char *titre) {
+    FILE *thefile = fopen("films.txt", "r+");
+
+    if (thefile == NULL) {
+        perror("Unable to open the file");
+        exit(1);
+    }
+    char line[200];
+    char line1[200];
+    int i = 0;
+    while (fgets(line, sizeof(line), thefile)) {
+        strcpy(line1, line);
+
+        char *token;
+        token = strtok(line, ";");
+
+        if (strcmp(token, titre) == 0) {
+            printf("Le film %s existe bien dans notre liste\n", line);
+            printf("%s", line1);
+            printf("N'hesitez pas a afficher la liste de tous nos films pour retrouver la fiche FILM de %s\n", line);
+            token = strtok(NULL, ";");
+            i++;
+        }
+
+    }
+    if (i == 0)
+        printf("On a pas de film %s dans notre filmotheque", titre);
+
 }
+
+
+
