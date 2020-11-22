@@ -173,6 +173,7 @@ void findMovie(char *titre) {
     int i = 0;
     while (fgets(line, sizeof(line), thefile)) {
         strcpy(line1, line);
+        movie movieName;
 
         char *token;
         token = strtok(line, ";");
@@ -184,7 +185,7 @@ void findMovie(char *titre) {
             token = strtok(NULL, ";");
             i++;
         }
-
+    fclose(thefile);
     }
     if (i == 0)
         printf("On a pas de film %s dans notre filmotheque", titre);
