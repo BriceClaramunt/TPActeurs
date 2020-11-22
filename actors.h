@@ -12,12 +12,12 @@ enum job {actor, director, actorDirector};
 
 typedef struct s_art
 {
-    const char *name;
-    const char *surname;
-    const char *dateOfBirth;
-    const char *nationality;
-    enum job nameJob;
-    const char *moviesPlayed;
+     char *name;
+     char *surname;
+     char *dateOfBirth;
+     char *nationality;
+     enum job nameJob;
+     char *moviesPlayed;
 } artist;
 
 
@@ -112,8 +112,28 @@ void displayAllArtists (FILE* fileRead)
     }
 }
 
-
-void addArtist()
+//à nouveau devoir créer une fonction pour le job de l'artiste
+void addArtist(FILE *file)
 {
+    FILE* fichier = fopen("acteurs.txt","a");
+    char *stringJob = NULL;
+    artist artistAdded;
+    printf("Quel est le prenom de l'artiste que vous voulez ajouter? \n");
+    scanf("%s",artistAdded.surname);
+    printf("Le nom : \n");
+    scanf("%s", artistAdded.name);
+    printf("La date de naissance : \n");
+    scanf("%s", artistAdded.dateOfBirth);
+    printf("La nationalite : \n");
+    scanf("%s", artistAdded.nationality);
+    printf("Le metier : (Acteur, Realisateur ou bien Acteur-Realisateur)\n");
+    scanf("%s", stringJob);
+    writeEnum(stringJob,artistAdded.nameJob);
+    printf("Les films auquel il a contribué : \n");
+    scanf("%s", artistAdded.moviesPlayed);
+
+
+    fprintf(fichier, "%s;%s;%s;%s;%s;%s", artistAdded.surname, artistAdded.name, artistAdded.dateOfBirth, artistAdded.nationality, artistAdded.nameJob, artistAdded.moviesPlayed);
+
 
 }

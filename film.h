@@ -173,10 +173,10 @@ void findMovie(char *titre) {
     int i = 0;
     while (fgets(line, sizeof(line), thefile)) {
         strcpy(line1, line);
-        movie movieName;
 
         char *token;
         token = strtok(line, ";");
+//on peut rajouter un nouveau film ici et lui attribuer toutes ses propriétés si j'ai le temps, afin de pouvoir utiliser displayMovie
 
         if (strcmp(token, titre) == 0) {
             printf("Le film %s existe bien dans notre liste\n", line);

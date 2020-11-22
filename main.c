@@ -44,10 +44,7 @@ int main() {
 //    displayArtist(jamesCameron);
 
     FILE* fichier = NULL;
-    char *titre;
-    printf("Tapez le nom du film que vous cherchez :\n");
-    scanf("%s", titre);
-    findMovie(titre);
+    addArtist(fichier);
 }
 
 
