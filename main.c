@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "film.h"
+
 #define STRING_SIZE 1000
 
 

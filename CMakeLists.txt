@@ -3,4 +3,4 @@ project(untitled C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(untitled main.c film.h)
+add_executable(untitled main.c film.h actors.c film.c)
