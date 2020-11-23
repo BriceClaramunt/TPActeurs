@@ -1,7 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "film.h"
+
 #define STRING_SIZE 1000
 
 
@@ -13,7 +12,7 @@ void mainMenu();
 
 int main() {
 
-    mainMenu();
+    //mainMenu();
 
     movie avatar;
     artist jamesCameron;
@@ -40,46 +39,48 @@ int main() {
     avatar.movieTime = 162;
     avatar.nameGenre = ScienceFiction;
 
-    displayMovie(avatar);
-    displayArtist(jamesCameron);
+//    displayMovie(avatar);
+//    displayArtist(jamesCameron);
 
     FILE* fichier = NULL;
-    char string[STRING_SIZE] = "";
-    char tmp[10];
-
-    fichier = fopen("acteurs.txt", "r+");
-    if (fichier != NULL)
-    {
-        while (fgets(string, STRING_SIZE, fichier) != NULL)
-        {
-            //test avec la date, nationalité et le métier
-            fscanf(fichier, ": %s; %s; %s;", &tmp[0], &tmp[1], &tmp[2]);
-            printf("Date Nationalite et metier : %s, %s et %s", &tmp[0], &tmp[1], &tmp[2]);
-
-
-        }
-
-    }
-    else
-    {
-        // On affiche un message d'erreur
-        printf("Le fichier acteurs.txt ne peut pas être lu.");
-    }
-
-    return 0;
+    addArtist(fichier);
 }
 
 
-void mainMenu ()
-{
-    unsigned int choice;
-    printf("Bienvenue dans cette application pour les cinephiles!\nMENU =\n\n[1] Lister les films\n[2] Lister les artistes\n[3] Rajouter un film\n[4] Rajouter un artiste\n[5] Rechercher un film par titre\n[6] Quitter l'application\n\n");
-    printf("Entrez votre choix :\n\n");
-    //scanf("%u", choice);
-    switch (choice) {
+//void mainMenu ()
+//{
+//    unsigned int choice;
+//    FILE* fichier = NULL;
+//    printf("Bienvenue dans cette application pour les cinephiles!\nMENU =\n\n[1] Lister les films\n[2] Lister les artistes\n[3] Rajouter un film\n[4] Rajouter un artiste\n[5] Rechercher un film par titre\n[6] Quitter l'application\n\n");
+//    printf("Entrez votre choix :\n\n");
+//    //scanf("%u", choice);
+//    switch (choice) {
+//        case 1:
+//            displayAllMovies(fichier);
+//            break;
+//        case 2:
+//            displayAllArtists(fichier);
+//            break;
+//        case 3:
+//            addMovie(fichier);
+//            break;
+//        case 4:
+//            addArtist(fichier);
+//            break;
+//        case 5:
+//             char *titre;
+//             printf("Tapez le nom du film que vous cherchez :\n");
+//             scanf("%s", titre);
+//             findMovie(titre);
+//             break;
+//        case 6:
+//              Quitter l'application (exit 0? mettre un default ??)
+//        default:
+//              printf("Tapez un numero parmi les choix possibles svp!");
+//              break;
+//
+//    }
+//}
 
-    }
-}
-
-//ce qu'il reste à faire : implémenter la base de données (fichier .txt ou .csv), puis les fonction du menu c'est-à-dire:
-//rechercher un film par son titre(film existe ou non), lister tous les films et tous les artistes?, rechercher un artiste, rajouter un film
+//ce qu'il reste à faire : implémenter la base de données (fichier .txt ou .csv), puis les fonctions du menu c'est-à-dire:
+//rechercher un film par son titre(film existe ou non), rechercher un artiste, rajouter un film
