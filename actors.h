@@ -26,4 +26,4 @@ void writeJob(enum job nameJob);
 enum job writeEnum (char *token, enum job nameJob);
 void displayArtist (artist artistName);
 void displayAllArtists (FILE* fileRead);
-void addArtist(FILE *file);
+void addArtist();

@@ -8,7 +8,7 @@
 #include <stdlib.h>
 
 
-
+//fonction qui permet de récupérer la propriété du genre du film, de type enum movieGenre, et d'afficher la string voulue suivant la valeur de movieGenre.
 void writeGenre(enum movieGenre nameGenre) {
     switch (nameGenre) {
         case 0:
@@ -40,6 +40,7 @@ void writeGenre(enum movieGenre nameGenre) {
     }
 }
 
+//fonction qui compare un token à la string souhaitée, et par la suite attribue la valeur voulue à la propriété nameGenre si les deux chaines sont égales.
 enum movieGenre writeMovieGenre (char *token, enum movieGenre nameGenre)
 {
     if(strcmp(token,"Action") == 0)
@@ -56,11 +57,13 @@ enum movieGenre writeMovieGenre (char *token, enum movieGenre nameGenre)
         nameGenre = Drame;
     if(strcmp(token,"Animation") == 0)
         nameGenre = Animation;
+    if(strcmp(token,"Science-Fiction") == 0)
+        nameGenre = ScienceFiction;
     return nameGenre;
 
 }
 
-
+//fonction qui affiche une fiche film d'un film rentré en paramètre
 void displayMovie(movie movieName)
 {
     printf("\nFiche FILM\n");
@@ -72,6 +75,7 @@ void displayMovie(movie movieName)
 
 }
 
+//fonction qui affiche tous les films contenus dans le fichier .txt
 void displayAllMovies (FILE* fileRead)
 {
     FILE* file= fopen("films.txt","r+");
@@ -135,12 +139,13 @@ void displayAllMovies (FILE* fileRead)
 
         }
         displayMovie(tmp);
-    }
 
+    }
+    fclose(file);
 }
 
 
-
+//fonction de recherche d'un film dans le fichier .txt, à partir d'un titre entré par l'utilisateur
 void findMovie(char *titre) {
     FILE *thefile = fopen("films.txt", "r+");
 
@@ -156,7 +161,6 @@ void findMovie(char *titre) {
 
         char *token;
         token = strtok(line, ";");
-//on peut rajouter un nouveau film ici et lui attribuer toutes ses propriétés si j'ai le temps, afin de pouvoir utiliser displayMovie
 
         if (strcmp(token, titre) == 0) {
             printf("Le film %s existe bien dans notre liste\n", line);
@@ -172,38 +176,52 @@ void findMovie(char *titre) {
 
 }
 
-void addMovie(FILE *file)
+//fonction qui permet d'ajouter un film dans le fichier .txt
+void addMovie()
 {
-    FILE* fichier = fopen("films.txt","a");
-    movie movieAdded;
+    char * title= malloc(sizeof(*title) * 256);
+    char* yearRelease= malloc(sizeof(*yearRelease) * 256);
+    char* surnameDirector= malloc(sizeof(*surnameDirector) * 256);
+    char* nameDirector= malloc(sizeof(*nameDirector) * 256);
+    char* surnameMainActor1= malloc(sizeof(*surnameDirector) * 256);
+    char* nameMainActor1= malloc(sizeof(*nameMainActor1) * 256);
+    char* surnameMainActor2= malloc(sizeof(*surnameMainActor2) * 256);
+    char* nameMainActor2= malloc(sizeof(*nameMainActor2) * 256);
+    char* surnameMainActor3= malloc(sizeof(*surnameMainActor3) * 256);
+    char* nameMainActor3= malloc(sizeof(*nameMainActor3) * 256);
+    char* movieTime= malloc(sizeof(*movieTime) * 256);
+    char* nameGenre= malloc(sizeof(*nameGenre) * 256);
+
+
     printf("Quel est le titre du film que vous voulez ajouter? \n");
-    scanf("%s",movieAdded.title);
+    scanf("%s",title);
     printf("L'annee de sortie du film: \n");
-    scanf("%u", &movieAdded.yearRelease);
-    printf("Le prénom du realisateur : \n");
-    scanf("%s", movieAdded.nameDirector.surname);
-    printf("Le nom du realisateur : \n");
-    scanf("%s", movieAdded.nameDirector.name);
+    scanf("%s", yearRelease);
+    printf("Le prenom du realisateur : \n");
+    scanf("%s", surnameDirector);
+    printf("Le nom du réalisateur : \n");
+    scanf("%s", nameDirector);
     printf("Le prenom du 1er acteur principal : \n");
-    scanf("%s", movieAdded.mainActor1.surname);
-    printf("Son nom : \n");
-    scanf("%s", movieAdded.mainActor1.name);
+    scanf("%s", surnameMainActor1);
+    printf("Le nom du 1er acteur principal : \n");
+    scanf("%s", nameMainActor1);
     printf("Le prenom du 2eme acteur principal : \n");
-    scanf("%s", movieAdded.mainActor2.surname);
+    scanf("%s", surnameMainActor2);
     printf("Son nom : \n");
-    scanf("%s", movieAdded.mainActor2.name);
+    scanf("%s", nameMainActor2);
     printf("Le prenom du 3eme acteur principal : \n");
-    scanf("%s", movieAdded.mainActor3.surname);
-    printf("Son nom : \n");
-    scanf("%s", movieAdded.mainActor3.name);
-    printf("La duree du film (en minutes)");
-    scanf("%u", &movieAdded.movieTime);
-    printf("Quel est le genre du film ? (Parmi : Action, Horreur, Comedie, Documentaire, Policier, Drame, Animation, ScienceFiction");
-    scanf("%s", movieAdded.nameGenre);
+    scanf("%s", surnameMainActor3);
+    printf("Le nom du 3eme acteur principal : \n");
+    scanf("%s", nameMainActor3);
+    printf("La duree du film (en minutes) :\n");
+    scanf("%s", movieTime);
+    printf("Quel est le genre du film ? (Parmi : Action, Horreur, Comedie, Documentaire, Policier, Drame, Animation, ScienceFiction)\n");
+    scanf("%s", nameGenre);
 
-
-    fprintf(fichier, "%s;%u;%s;%s;%s;%s;%s;%s;%s;%s;%u;%s", movieAdded.title, movieAdded.yearRelease, movieAdded.nameDirector.surname, movieAdded.nameDirector.name, movieAdded.mainActor1.surname, movieAdded.mainActor1.name, movieAdded.mainActor2.surname, movieAdded.mainActor2.name, movieAdded.mainActor3.surname, movieAdded.mainActor3.name, movieAdded.movieTime, movieAdded.nameGenre);
-
+    FILE* fichier = fopen("films.txt","a");
+    fprintf(fichier, "%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s;%s\n",title, yearRelease, surnameDirector, nameDirector, surnameMainActor1, nameMainActor1, surnameMainActor2, nameMainActor2, surnameMainActor3, nameMainActor3, movieTime, nameGenre);
+    printf("Votre film a bien ete ajoute!");
+    fclose(fichier);
 
 }
 

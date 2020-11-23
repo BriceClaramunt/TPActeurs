@@ -8,9 +8,7 @@
 
 
 
-//on peut facilement améliorer la date de naissance, en faisant une structure pour cette dernière.
-//Si j'ai le temps, faire cette date de naissance (voir page 23 du cours 6)
-
+//Fonction permettant de récupérer la propriété nameJob d'un artiste, de type enum job, et d'afficher une string à partir de cette variable
 void writeJob(enum job nameJob) {
     switch (nameJob) {
         case 0:
@@ -26,6 +24,7 @@ void writeJob(enum job nameJob) {
             printf("Metier non reconnu\n");
     }}
 
+//fonction permettant de comparer un token avec la string voulue, si la condition est respectée la propriété nameJob prendra la valeur voulue.
 enum job writeEnum (char *token, enum job nameJob)
 {
     if(strcmp(token,"Acteur") == 0)
@@ -38,6 +37,7 @@ enum job writeEnum (char *token, enum job nameJob)
 
 }
 
+//fonction permettant d'afficher la fiche Artiste d'un artiste spécifique, spécifié comme paramètre de la fonction.
 void displayArtist (artist artistName)
 {
     printf("\nFiche ARTISTE \n");
@@ -50,6 +50,7 @@ void displayArtist (artist artistName)
 
 }
 
+//fonction qui affiche la liste entière des artistes contenant dans le fichier .txt
 void displayAllArtists (FILE* fileRead)
 {
     FILE* file= fopen("acteurs.txt","r+");
@@ -96,16 +97,23 @@ void displayAllArtists (FILE* fileRead)
 
         }
         displayArtist(tmp);
+
     }
+    fclose(file);
 }
 
-//à nouveau devoir créer une fonction pour le job de l'artiste + faire fonctionner l'écriture
-void addArtist(FILE *file)
+//fonction qui ajoute un artiste dans le fichier .txt
+void addArtist()
 {
-    FILE* fichier = fopen("acteurs.txt","a+");
-    char *stringJob = NULL;
-    artist artistAdded;
-    char* prenom, nom, date, nationalite, job, films = NULL;
+    char* prenom= malloc(sizeof(*prenom) * 256);
+    char* nom= malloc(sizeof(*nom) * 256);
+    char* date= malloc(sizeof(*date) * 256);
+    char* nationalite= malloc(sizeof(*nationalite) * 256);
+    char* job= malloc(sizeof(*job) * 256);
+    char* films= malloc(sizeof(*films) * 256);
+
+
+
 
     printf("Quel est le prenom de l'artiste que vous voulez ajouter? \n");
     scanf("%s",prenom);
@@ -114,18 +122,20 @@ void addArtist(FILE *file)
     scanf("%s", nom);
 
     printf("La date de naissance : \n");
-    scanf("%s", artistAdded.dateOfBirth);
+    scanf("%s", date);
 
     printf("La nationalite : \n");
-    scanf("%s", artistAdded.nationality);
+    scanf("%s", nationalite);
+
     printf("Le metier : (Acteur, Realisateur ou bien Acteur-Realisateur)\n");
-    scanf("%s", stringJob);
-    writeEnum(stringJob,artistAdded.nameJob);
-    printf("Les films auquel il a contribué : \n");
-    scanf("%s", artistAdded.moviesPlayed);
+    scanf("%s", job);
 
+    printf("Les films auquel il a contribue : \n");
+    scanf("%s", films);
 
-    fprintf(fichier, "%s;%s;%s;%s;%s;%s", prenom, nom, artistAdded.dateOfBirth, artistAdded.nationality, artistAdded.nameJob, artistAdded.moviesPlayed);
-
+    FILE *fichier = fopen("acteurs.txt", "a");
+    fprintf(fichier, "%s;%s;%s;%s;%s;%s\n", prenom, nom, date, nationalite, job, films);
+    printf("Votre artiste a bien ete ajoute!");
+    fclose(fichier);
 
 }

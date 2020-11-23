@@ -27,5 +27,5 @@ enum movieGenre writeMovieGenre (char *token, enum movieGenre nameGenre);
 void displayMovie(movie movieName);
 void displayAllMovies (FILE* fileRead);
 void findMovie(char *titre);
-void addMovie(FILE *file);
+void addMovie();
 

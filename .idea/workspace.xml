@@ -29,12 +29,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f1587f5-9350-4751-864c-2456a1fe3bb9" name="Default Changelist" comment="addMovie, doesn't work yet">
-      <change afterPath="$PROJECT_DIR$/actors.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/film.c" afterDir="false" />
+    <list default="true" id="4f1587f5-9350-4751-864c-2456a1fe3bb9" name="Default Changelist" comment="Code rearranged, with the right headers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actors.c" beforeDir="false" afterPath="$PROJECT_DIR$/actors.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actors.h" beforeDir="false" afterPath="$PROJECT_DIR$/actors.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/film.c" beforeDir="false" afterPath="$PROJECT_DIR$/film.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/film.h" beforeDir="false" afterPath="$PROJECT_DIR$/film.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
     </list>
@@ -48,9 +47,14 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="brice" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="1k3dGa39xA2YlVsDLzPuqc0PE3d" />
+  <component name="ProjectId" id="1khDPvUD61phrEe6AvsaxEU6jqD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -60,20 +64,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="ObjectiveC" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/Cinema_5/Cinema 5/Films.h" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
     <configuration name="untitled" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="untitled" TARGET_NAME="untitled" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="untitled" RUN_TARGET_NAME="untitled">
@@ -90,148 +91,15 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="4f1587f5-9350-4751-864c-2456a1fe3bb9" name="Default Changelist" comment="" />
-      <created>1604933113339</created>
+      <changelist id="4f1587f5-9350-4751-864c-2456a1fe3bb9" name="Default Changelist" comment="Code rearranged, with the right headers" />
+      <created>1606143910250</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1604933113339</updated>
-      <workItem from="1604933114585" duration="1065000" />
-      <workItem from="1604957522040" duration="2037000" />
-      <workItem from="1605089241632" duration="11199000" />
-      <workItem from="1605347063983" duration="12372000" />
-      <workItem from="1605825997545" duration="3836000" />
-      <workItem from="1605958300153" duration="10411000" />
-      <workItem from="1606050130599" duration="28058000" />
-      <workItem from="1606122849195" duration="1901000" />
-      <workItem from="1606136691222" duration="1548000" />
+      <updated>1606143910250</updated>
+      <workItem from="1606143911967" duration="46000" />
+      <workItem from="1606145081095" duration="5039000" />
+      <workItem from="1606162466922" duration="3705000" />
     </task>
-    <task id="LOCAL-00001" summary="test branch">
-      <created>1604957822904</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1604957822904</updated>
-    </task>
-    <task id="LOCAL-00002" summary="actors.h">
-      <created>1604957959834</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1604957959834</updated>
-    </task>
-    <task id="LOCAL-00003" summary="test actor struct">
-      <created>1605089976374</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1605089976374</updated>
-    </task>
-    <task id="LOCAL-00004" summary="test actor struct 2">
-      <created>1605090141786</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1605090141786</updated>
-    </task>
-    <task id="LOCAL-00005" summary="function displayMovie">
-      <created>1605102294686</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1605102294686</updated>
-    </task>
-    <task id="LOCAL-00006" summary="function displayDirector">
-      <created>1605104702689</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1605104702689</updated>
-    </task>
-    <task id="LOCAL-00007" summary="function mainMenu (without the different choices implemented)">
-      <created>1605348603884</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1605348603884</updated>
-    </task>
-    <task id="LOCAL-00008" summary="change with a struct artist, change with the movie genre that is now an enum">
-      <created>1605369360431</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1605369360431</updated>
-    </task>
-    <task id="LOCAL-00009" summary="changing the displayDirector function into a function showing the information of the Artist with the job specified.">
-      <created>1605370392868</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1605370392868</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Still a problem with files">
-      <created>1605964958042</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1605964958042</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Still a problem with files 2">
-      <created>1605984618633</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1605984618633</updated>
-    </task>
-    <task id="LOCAL-00012" summary="displayAllArtists working except for the enum parameter">
-      <created>1606051231263</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1606051231263</updated>
-    </task>
-    <task id="LOCAL-00013" summary="displayAllArtists done">
-      <created>1606059330526</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1606059330526</updated>
-    </task>
-    <task id="LOCAL-00014" summary="displayAllMovies done">
-      <created>1606064577995</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1606064577995</updated>
-    </task>
-    <task id="LOCAL-00015" summary="findMovie done">
-      <created>1606078063778</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1606078063778</updated>
-    </task>
-    <task id="LOCAL-00016" summary="findMovie done">
-      <created>1606082455437</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1606082455437</updated>
-    </task>
-    <task id="LOCAL-00017" summary="addArtist, don't work yet">
-      <created>1606085200469</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1606085200469</updated>
-    </task>
-    <task id="LOCAL-00018" summary="addMovie, doesn't work yet">
-      <created>1606086475261</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1606086475261</updated>
-    </task>
-    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -270,77 +138,34 @@
     <option name="LAST_COMMIT_MESSAGE" value="addMovie, doesn't work yet" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="361" y="71" key="#Deployment" timestamp="1604933232672">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1606165983979">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="71" key="#Deployment/0.0.1536.824@0.0.1536.824" timestamp="1604933232672" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1606136980851">
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606165983979" />
+    <state width="1493" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606158547805" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center" timestamp="1606165983978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606062918895" />
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1606136980851" />
-    <state x="647" y="310" key="Github.ShareDialog" timestamp="1604933273413">
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606165983978" />
+    <state width="1493" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606158547804" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left" timestamp="1606165983978">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="647" y="310" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1604933273413" />
-    <state x="571" y="117" key="Github.UntrackedFilesDialog" timestamp="1604933280196">
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606165983978" />
+    <state width="1493" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606158547804" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right" timestamp="1606165983979">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="571" y="117" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1604933280196" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1606132463433">
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606165983979" />
+    <state width="1493" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606158547805" />
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606145111792">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606086484631" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1606132463433" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1606132463432">
+    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1606145111792" />
+    <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606143924038">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606086484631" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1606132463432" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1606132463432">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606086484631" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1606132463432" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1606132463432">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606086484631" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1606132463432" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1605988970606">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1605988970606" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1605988970606">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1605988970606" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1605988970606">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1605988970606" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1605988970606">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1605988970606" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1605362903043">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1605362903043" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1606086476476">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606086476476" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1605984675278" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1606082449462">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824/0.-1080.1280.680@0.0.1536.824" timestamp="1606082449462" />
-    <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1605984607943" />
-    <state x="320" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1605980076915">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="320" y="141" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1536.824@0.0.1536.824" timestamp="1605980076915" />
+    <state x="550" y="125" key="git4idea.branch.GitSmartOperationDialog/0.0.1536.824@0.0.1536.824" timestamp="1606143924038" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
